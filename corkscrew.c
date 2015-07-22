@@ -202,7 +202,7 @@ char *argv[];
 				exit(-1);
 			} else {
 				char line[4096];
-				fscanf(fp, "%s", line);
+				fscanf(fp, "%4096[:0-9a-zA-Z ]", line);
 				up = malloc(sizeof(line));
 				up = line;
 				fclose(fp);
